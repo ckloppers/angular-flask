@@ -23,10 +23,6 @@ session = api_manager.session
 def basic_pages(**kwargs):
 	return make_response(open('angular_flask/templates/index.html').read())
 
-@app.route('/upload')
-def upload_redirect(**kwargs):
-    return make_response(open('angular_flask/templates/upload.html').read())
-
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
 from sqlalchemy.sql import exists
